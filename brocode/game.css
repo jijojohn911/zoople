@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    box-sizing:border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    padding:  25px;
+    background-color: hsl(195, 53%, 69%);
+    font-size: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    margin: 10px;
+
+
+}
+button:hover{
+ background-color: hsl(195, 53%, 61%);
+}
+#playerDisplay{
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-top: 30px;
+
+}
+
+#computerDisplay{
+    font-size: 3rem;
+    font-weight: bolder;
+padding-top: 30px;
+}
+
+#resultDisplay{
+    font-size: 3rem;
+    font-weight: bolder;
+padding-top: 30px;
+}
+.redtext,#computerScore{
+    color: hsl(0, 100%, 50%);
+
+}
+.greentext,#playerScore{
+    color: hsl(120, 93%, 50%);
+}
+.bluetext{
+    color: hsl(195, 71%, 54%);
+}
+#playerScore{
+   font-size: 3rem;
+   font-weight: bolder;
+   margin-top: 40px;
+   
+}
+#computerScore{
+   font-size: 3rem;
+   font-weight: bolder;
+   margin-top: 20px;
+   
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom example</title>
+</head>
+
+<body>
+    <!-- <h1 id="heading">welcome</h1>
+    <div id="box" style="width: 200px; height: 100px; background-color: lightgrey;">
+    this is a bhox
+    </div>
+    <br/>
+    <button id="btn">click on me</button>
+    <script>
+        //read content
+        let heading = document.getElementById("heading");
+        console.log(heading.textContent);
+        
+        //change contnt
+        heading.innerText="hi"
+
+        //change style
+        let box = document.getElementById("box");
+        box.style.backgroundColor="red";
+
+       document.getElementById("box").style.border= "black 2px solid";
+       
+       //click event
+       let button=document.getElementById("btn");
+       button.onclick=function(){
+        alert("clicked");
+       }
+   </script> -->
+
+
+    <!-- evnets in js -->
+    <!-- <button id="btn">Click Me</button>
+<script>
+    let button= document.getElementById("btn");
+    //Add click event listner
+    button.addEventListener("click",()=>{
+        alert("button was clicked")
+    }); 
+ <p id="datas">f</p>
+    <input type="text" id="username" placeholder="type here">
+    <script>
+        let inputfield=document.getElementById("username");
+         let data=document.getElementById("datas")
+        inputfield.addEventListener("input", function(){
+           console.log(inputfield.value);
+           datas.innerText=inputfield.value;
+            
+        });
+    </script>
+     
+
+
+
+
+      <h1 id="count">0</h1>
+      <button id="increment">increase</button>
+      <script>
+        let count=0;
+        let display=document.getElementById("count");
+        let button= document.getElementById("increment");
+        button.addEventListener("click",()=>{
+            count++
+            display.innerText=count;
+            console.log("count",count)
+        }) 
+      </script> -->
+
+
+
+    <!-- <form id="loginForm">
+        <input type="text" id="username" placeholder="TYPE HERE">
+        <button type="submit" value="login"> logIn</button>
+        <p id="error"></p>
+    </form>
+
+    <script>
+        let form = document.getElementById("loginForm");
+        let username1 = document.getElementById("username");
+        let error=document.getElementById("error");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            if (username1.value===""){
+            error.innerText="enter name";
+            }else if(username1.value.length<6){
+                error.innerText="username must be 6 charters";
+            }else{
+                error.innerText= "succesfully entered"
+            }
+
+
+        })
+    </script> -->
+
+
+
+<!--         
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="TYPE HERE">
+            <br>
+            <p id="errorMsg"></p>
+            
+            <input type="password" id="password" placeholder="passsword">
+            <br>
+            <p id="errorMsg1"></p>
+            <br>
+            <button type="submit" value="Log in">Log In</button>
+        </form>
+        <script>
+            const form =document.getElementById("loginForm");
+            const name = document.getElementById("username");
+            const pass = document.getElementById("password");
+            const error = document.getElementById("errorMsg");
+            const errorOne = document.getElementById("errorMsg1");
+
+
+            name.addEventListener("input", () => {
+            if (name.value.length >= 0) {
+                error.innerText = "";
+            }
+        });
+
+        
+        pass.addEventListener("input", () => {
+            if (pass.value.length >= 0) {
+                errorOne.innerText = "";
+            }
+        });
+
+
+            form.addEventListener("submit", (event) => {
+            
+                
+                event.preventDefault();
+                if (name.value === "" || name.value.length < 4) {
+                    error.innerText="add username or must be more than 4 charaters"
+                } 
+                if(pass.value===""||pass.value.length<6){
+                    errorOne.innerText="password must be atleast 6 charaters";
+                }else {
+                    errorOne.innerText="successfully filled"
+                }
+            })
+
+
+        </script> -->
+
+
+    <!-- <h1 id="cont"></h1>
+    <p id="para">code</p>
+    <script>
+        let word="code"
+        let parag=document.getElementById("para").innerText
+        document.getElementById("cont").innerText=parag[2]
+
+
+
+
+    </script> -->
+
+
+</body>
+
+</html>

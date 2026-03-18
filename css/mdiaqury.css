@@ -1,0 +1,24 @@
+.we{
+    background-color: burlywood;
+    width: 200px;
+    height: 200px;
+    border: 30px solid goldenrod;
+    margin-left: 500px;
+    padding-left: 300px;
+}
+@media(max-width:400px){
+    .we{
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        border: 5px dotted brown;
+    }
+    span{
+        color: chocolate;
+        display: none;
+    }
+}
+#q{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: small;color: red;
+}

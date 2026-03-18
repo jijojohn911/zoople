@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background:linear-gradient(90deg,hsl(197, 73%, 30%) 10%, hsl(177, 47%, 47%) 100%);
+    
+}
+.container{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  padding: 10px; 
+}
+label{
+    font-weight: 400px;
+margin: 10px 0px;
+
+}
+button{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(160, 70%, 52%);
+    font-weight: bold;
+    margin-top: 10px;
+}
+button:hover{
+    background-color:  hsl(160, 70%, 70%);
+}
+button:active{
+    background-color:  hsl(160, 70%, 80%);
+}
+input{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 200px;
+}

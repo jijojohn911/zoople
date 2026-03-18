@@ -1,0 +1,53 @@
+/* #box{
+    border: 3px solid;
+    width: 250px;
+    height: 125px;
+    background-color: green;
+    font-size: 2.5rem;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+button{
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: rgb(58, 170, 170);
+
+} */
+
+/* body{
+    display: flex;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+#box{
+   background-color: lightblue;
+   width: 100px;
+   height: 100px;
+   font-size: 4rem;
+} */
+ 
+
+button{
+margin: 10px;
+display: flex;
+}
+
+#myBtn{
+    padding: 10px 15px;
+    font-size: 4rem;
+}
+
+.enabled{
+    background-color: hsl(195, 53%, 79%);
+    color: black;
+}
+.hover{
+    background-color: rgb(61, 178, 139);
+}
+.disabled{
+    background-color: beige;
+    color: rgb(36, 95, 206);
+}

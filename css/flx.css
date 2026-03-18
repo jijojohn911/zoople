@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.one{
+    background-color: greenyellow;
+    flex-basis: 100px;
+}
+.two{
+    background-color: aqua;
+}
+.three{
+    background-color: red;
+}

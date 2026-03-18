@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:radial-gradient(circle,rgb(27, 172, 175),#0b4059);
+
+}
+#right,#left{
+    width: 300px;
+    border: 2px dashed #fff;
+    min-height: 400px;
+    margin: 20px;
+
+}
+.list{
+    background-color:red ;
+    height: 70px;
+    width: 250px;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+  cursor: grab;
+  color: white;
+
+}

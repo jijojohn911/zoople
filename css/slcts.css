@@ -1,0 +1,38 @@
+#five{
+    background-color: coral;
+}
+
+h2{
+    font-size: 50px;
+    color: cadetblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+
+.you{
+    background-color: aquamarine;
+}
+
+*{
+    color: rgb(255, 0, 251);
+}
+
+body{
+    background-image: url("image.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+    
+}
+.we{
+    background-color: burlywood;
+    width: 200px;
+    height: 200px;
+    border: 3px solid goldenrod;
+    margin-left: 100px;
+    padding: 30px;
+}
+
+    

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form id="myForm">
+        <input type="text" placeholder="type here">
+        <button type="submit">Submit</button>
+    </form>
+    <script src="form.js"></script> -->
+<form id="myForm">
+    <input type="text" placeholder="type here" id="name">
+    <button type="submit" value="login" >Submit</button >
+    <p id="error" style="color: red;"></p>
+</form>
+<script>
+    let form=document.getElementById("myForm");
+    let nameInput=document.getElementById("name");
+    let errormsg=document.getElementById("error");
+
+    //listen for submit
+    form.addEventListener("submit",(event)=>{
+        //stop page reload
+        event.preventDefault();
+        //check if empty
+        console.log("nameInput",nameInput);
+        
+        if (nameInput.value===""){
+            console.log("hiii");
+            
+            errormsg.innerText="enter Name";
+        
+
+        }else{
+            errormsg.innerText="succusss";
+            console.log("form submited");
+        }
+
+
+    })
+</script>
+    
+</body>
+</html>
