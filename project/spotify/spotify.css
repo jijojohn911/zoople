@@ -1,0 +1,216 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* background-color: var(--secondary-color); */
+}
+
+:root {
+    /* colors */
+    --white-color: #fff;
+    --dark-color: #292323;
+    --primary-color: #b69820;
+    --secondary-color: rgb(0, 0, 0);
+    --light-pink-color: #f5d8dc;
+    --medium-grey-color: #ccc;
+
+    /* font size */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    ;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* font-weight */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* border-radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* site max width */
+    --site-max-width: 1300px;
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+li,
+ul {
+    list-style: none;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+#logo {
+    width: 70px;
+    height: 70px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-text {
+    color: var(--white-color);
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-bold);
+    white-space: nowrap;
+
+}
+
+.section-content {
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* header-section / navbar */
+header {
+    height: 80px;
+    position: fixed;
+    background-color: var(--secondary-color);
+    width: 100%;
+    z-index: 5;
+    margin-bottom:10px;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 60px;
+
+}
+
+.nav-menu li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu .nav-items .nav-link {
+    color: var(--white-color);
+}
+
+.nav-menu .nav-items .nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-menu .nav-input {
+    border-radius: var(--border-radius-m);
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: 0;
+
+}
+
+.nav-input::placeholder {
+    color: black;
+}
+
+.navbar button {
+    border: none;
+    padding: 10px 20px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-s);
+    transition: 0.3s ease;
+    border-radius: var(--border-radius-m);
+    color: var(--white-color);
+}
+
+.navbar button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.navbar .logo-text {
+    color: var(--primary-color);
+}
+
+main{
+   margin-top: 85px;
+   background-color: #201e1e;
+   max-width: 460px;
+   margin-left: 10px;
+   border-radius: var(--border-radius-s);
+   max-height: 350px;
+   
+}
+/* hero section */
+main .hero-section{
+    display: flex;
+    flex-direction: column;
+}
+.hero-section .hero-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px;
+    position: fixed;
+}
+
+.hero-content .library{
+    color: var(--primary-color);
+
+}
+.hero-content .library-button{
+    transition: background 0.3s ease;
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius-m);
+    background-color:var(--primary-color);
+    margin-left: 200px;
+}
+.hero-content .library-button:hover{
+   background-color:#917a21;
+}
+.hero-section .library-content{
+    margin-top: 60px;
+    margin-left:10px;
+}
+.hero-section .library-text{
+    color:var(--primary-color);
+}
+.hero-section .description{
+    color: var(--primary-color);
+    margin: 5px;
+}
+.library-content .create-btn-2{
+    margin: 20px;
+    padding: 8px 15px;
+    border-radius: var(--border-radius-m);
+    background-color:#917a21;
+    border: none;
+}
+ main .music-list {
+    display: flex;
+    flex-direction: row;
+    
+    background-color: #f5d8dc;
+
+}
+
+
+
