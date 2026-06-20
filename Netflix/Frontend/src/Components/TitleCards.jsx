@@ -1,90 +1,71 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import cards_data from '../assets/cards/Cards_data'
+import { NavLink } from 'react-router-dom';
 
-const TitleCards = () => {
+const TitleCards = ({ title = "Popular on Netflix", category }) => {
+
+  const [apiData, setApiData] = useState([])
+
+  const cardRef = useRef();
+
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZjQ4MzIwZTQzMWMyMGZlZDc2OWMzNTYzZGUxN2UzNSIsIm5iZiI6MTc4MTgwNjQzNy4yNjQsInN1YiI6IjZhMzQzNTY1ZmU3NTY5NjhiMzI3M2JmOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5QPykZakzPNHCmYQs99pxYCoVDnzzQCoRkqwD__OQDg'
+    }
+  };
+
+
+
+  useEffect(() => {
+    fetch(`https://api.themoviedb.org/3/movie/${category ? category : "now_playing"}?language=en-US&page=1`, options)
+      .then(res => res.json())
+      .then(res => setApiData(res.results))
+      .catch(err => console.error(err));
+
+  }, [])
+
+  const handleWheel = (e) => {
+
+    cardRef.current.scrollLeft += e.deltaY;
+  };
   return (
-    <div className=' absolute my-30 min-w-full py-4 md:px-1 text-white bg-red-600 '>
-        <h2 className='mb-4 text-xl text-black md:text-2xl font-bold tracking-wide transition duration-300 hover:text-red-600 cursor-pointer inline-block'>Popular on Netflix</h2>
-        <div className='flex w-full overflow-scroll  overflow-x-auto '>
-            {cards_data.map((card)=>{
-                return <div key={card.name}>
-                <img src={card.image} alt="" />
-                <p className='text-black'>{card.name}</p>
-                </div>
-            })}
-        </div>
+    <div
+      className='min-w-full pl-4 md:px-1 text-white'
+    >
+      <h2
+        className='mb-2 mt-2 text-xl md:text-2xl font-bold tracking-wide transition duration-300 hover:text-red-600 cursor-pointer inline-block '>{title}
+      </h2>
+      <div
+        className="flex gap-5 overflow-x-auto hide-scrollbar scroll-smooth"
+        ref={cardRef}
+        onWheelCapture={handleWheel}
+      >
+
+        {apiData.map((card) => {
+          return (
+            <NavLink to={`player/${card.id}`}>
+            <div
+              key={card.original_title}
+              className="relative shrink-0 w-50 md:w-48 overflow-hidden rounded-xl cursor-pointer group"
+            >
+              <img
+                src={`https://image.tmdb.org/t/p/w500` + card.backdrop_path}
+                alt="cards"
+                className="w-full h-full object-cover rounded-xl transition-transform duration-300 group-hover:scale-110"
+              />
+
+              <p className="absolute bottom-2 left-2 text-white font-bold text-sm bg-black/30 px-2 rounded">
+                {card.original_title}
+              </p>
+            </div>
+            </NavLink>
+          )
+        })}
+      </div>
     </div>
   )
 }
 
 export default TitleCards
-
-
-
-
-
-
-
-// import React, { useRef } from 'react'
-// import cards_data from '../assets/cards/Cards_data'
-
-// const TitleCards = () => {
-//   const cardsContainerRef = useRef(null);
-
-//   return (
-//     /* FORCE FULL SCREEN: 
-//       - 'w-screen' makes it exactly the width of the browser window.
-//       - 'relative left-1/2 -translate-x-1/2' breaks out of any constrained parent element.
-//     */
-//     <div className='w-screen relative left-1/2 right-1/2 -translate-x-1/2 text-white bg-transparent my-10 overflow-hidden'>
-      
-//       {/* Title aligning with the standard Netflix edge padding */}
-//       <h2 className='mb-4 text-xl md:text-3xl font-bold tracking-wide px-4 md:px-16'>
-//         Popular on Netflix
-//       </h2>
-      
-//       {/* Horizontal Scroll Area */}
-//       <div 
-//         ref={cardsContainerRef}
-//         className='flex gap-4 overflow-x-auto scroll-smooth py-4 px-4 md:px-16 w-full select-none'
-//         style={{ 
-//           scrollbarWidth: 'none',          /* Firefox */
-//           msOverflowStyle: 'none',         /* IE and Edge */
-//         }}
-//       >
-//         {/* Forces webkit browsers (Chrome/Safari) to hide the scrollbar track */}
-//         <style>{`
-//           div::-webkit-scrollbar {
-//             display: none !important;
-//           }
-//         `}</style>
-
-//         {cards_data.map((card) => {
-//           return (
-//             <div 
-//               key={card.name} 
-//               className='min-w-[260px] sm:min-w-[300px] md:min-w-[360px] lg:min-w-[400px] 
-//                          cursor-pointer transition-all duration-300 ease-out
-//                          hover:scale-105 hover:z-30'
-//             > 
-//               {/* Large Cinematic Aspect Ratio Card Box */}
-//               <div className="overflow-hidden rounded-md shadow-lg aspect-[16/9] bg-zinc-900">
-//                 <img 
-//                   src={card.image} 
-//                   alt={card.name} 
-//                   className='w-full h-full object-cover pointer-events-none'
-//                 />
-//               </div>
-              
-//               <p className='text-sm font-medium mt-2 text-zinc-400 truncate px-1'>
-//                 {card.name}
-//               </p>
-//             </div>
-//           )
-//         })}
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default TitleCards
